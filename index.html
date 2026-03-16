@@ -751,6 +751,9 @@
 <footer><p>Sam Morse &middot; 2026</p></footer>
 
 <script>
+  window.history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -763,7 +766,4 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (scrollY >= s.offsetTop - 120) 
+  const navLinks = document.q
